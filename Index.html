@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nigeria History Explorer</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7f4;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background: #008751;
+      color: white;
+      text-align: center;
+      padding: 30px 16px;
+    }
+    header h1 { margin: 0; font-size: 30px; }
+    header p { margin-bottom: 0; }
+    nav {
+      background: #006b40;
+      padding: 12px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .welcome {
+      background: white;
+      padding: 22px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px #0001;
+    }
+    .timeline {
+      border-left: 4px solid #008751;
+      padding-left: 18px;
+      margin: 20px 0;
+    }
+    .event {
+      background: white;
+      padding: 18px;
+      margin-bottom: 16px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px #0001;
+    }
+    .event h3 { color: #007342; margin-top: 0; }
+    button {
+      background: #008751;
+      color: white;
+      border: 0;
+      padding: 11px 16px;
+      border-radius: 7px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover { background: #006b40; }
+    #fact {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+    footer {
+      background: #123c2a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    @media (max-width: 500px) {
+      header h1 { font-size: 25px; }
+      nav a { display: inline-block; margin: 5px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🇳🇬 Nigeria History Explorer</h1>
+    <p>Discover our past. Understand our present. Inspire our future.</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#timeline">History Timeline</a>
+    <a href="#facts">Did You Know?</a>
+  </nav>
+
+  <main>
+    <section class="welcome" id="home">
+      <h2>Welcome, History Explorer!</h2>
+      <p>
+        Nigeria has a rich history shaped by ancient kingdoms,
+        diverse cultures, colonial rule, independence and the
+        contributions of millions of Nigerians.
+      </p>
+      <p>
+        Explore important events that helped shape our nation.
+      </p>
+    </section>
+
+    <section id="timeline">
+      <h2>Explore Nigeria's History</h2>
+      <div class="timeline">
+        <article class="event">
+          <h3>Before the 1800s — Ancient Civilisations</h3>
+          <p>
+            The Nok culture is known for its remarkable terracotta
+            sculptures. Powerful societies and kingdoms, including
+            Ife and Benin, developed distinctive art, trade and
+            political systems.
+          </p>
+        </article>
+
+        <article class="event">
+          <h3>1800s — Kingdoms and Changing Trade</h3>
+          <p>
+            The Sokoto Caliphate emerged in the early nineteenth
+            century. Oyo, Benin and other states also played
+            important roles in the region's political and cultural
+            history.
+          </p>
+        </article>
+
+        <article class="event">
+          <h3>1861–1914 — British Colonial Expansion</h3>
+          <p>
+            Britain annexed Lagos in 1861. Colonial control expanded
+            across the region, and in 1914 the Northern and Southern
+            Protectorates were amalgamated into Nigeria.
+          </p>
+        </article>
+
+        <article class="event">
+          <h3>1 October 1960 — Independence</h3>
+          <p>
+            Nigeria gained independence from Britain on 1 October
+            1960. Sir Abubakar Tafawa Balewa became the country's
+            first prime minister.
+          </p>
+        </article>
+
+        <article class="event">
+          <h3>1967–1970 — Nigerian Civil War</h3>
+          <p>
+            The Nigerian Civil War followed the attempted secession
+            of Biafra. The war ended in January 1970 and left a
+            lasting impact on the country.
+          </p>
+        </article>
+
+        <article class="event">
+          <h3>1 October 1963 — Republic</h3>
+          <p>
+            Nigeria became a republic in 1963, replacing the British
+            monarch as head of state with a Nigerian president.
+          </p>
+        </article>
+
+        <article class="event">
+          <h3>29 May 1999 — Return to Civilian Rule</h3>
+          <p>
+            Nigeria returned to democratic civilian government
+            under President Olusegun Obasanjo after years of
+            military rule.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="welcome" id="facts">
+      <h2>Did You Know?</h2>
+      <p>Discover a fact about Nigeria.</p>
+      <button onclick="showFact()">Reveal a History Fact</button>
+      <p id="fact" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Nigeria History Explorer 🇳🇬</p>
+    <p>Learning from history, building tomorrow.</p>
+  </footer>
+
+  <script>
+    const facts = [
+      "Nigeria became independent on 1 October 1960.",
+      "Lagos was annexed by Britain in 1861.",
+      "The Nok culture is famous for ancient terracotta sculptures.",
+      "Nigeria became a republic in 1963.",
+      "Nigeria has hundreds of ethnic groups and languages."
+    ];
+
+    let factIndex = 0;
+
+    function showFact() {
+      document.getElementById("fact").textContent =
+        facts[factIndex];
+      factIndex = (factIndex + 1) % facts.length;
+    }
+  </script>
+</body>
+</html>

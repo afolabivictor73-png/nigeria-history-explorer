@@ -30,7 +30,7 @@
     img { max-width: 100%; }
 
     header {
-      background: var(--dark);
+      background: rgba(6, 75, 48, 0.96);
       color: white;
       padding: 12px 5%;
       display: flex;
@@ -40,8 +40,9 @@
       flex-wrap: wrap;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 20;
       box-shadow: 0 3px 12px #0002;
+      backdrop-filter: blur(8px);
     }
 
     .brand {
@@ -75,6 +76,25 @@
       font-size: 13px;
       padding: 5px;
       transition: color .2s ease;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .2s ease;
+    }
+
+    nav a:hover::after,
+    nav a:focus-visible::after {
+      transform: scaleX(1);
     }
 
     nav a:hover { color: var(--gold); }
@@ -175,6 +195,7 @@
       text-align: center;
       border-radius: 12px;
       box-shadow: var(--shadow);
+      animation: fadeUp .65s ease both;
     }
 
     .stat strong {
@@ -203,6 +224,7 @@
       box-shadow: var(--shadow);
       border: 1px solid #e6ece5;
       transition: transform .2s ease, box-shadow .2s ease;
+      animation: fadeUp .7s ease both;
     }
 
     .card:hover,
@@ -306,6 +328,23 @@
       padding: 25px;
     }
 
+    .quiz-progress-bar {
+      width: 100%;
+      height: 10px;
+      background: #edf3ee;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+
+    .quiz-progress-fill {
+      height: 100%;
+      width: 20%;
+      background: linear-gradient(90deg, var(--green), var(--gold));
+      border-radius: inherit;
+      transition: width .25s ease;
+    }
+
     .option {
       display: block;
       width: 100%;
@@ -317,7 +356,7 @@
       text-align: left;
       cursor: pointer;
       font-size: 15px;
-      transition: background .2s ease, border-color .2s ease;
+      transition: background .2s ease, border-color .2s ease, transform .2s ease;
     }
 
     .option:hover { background: #e9f5eb; }
@@ -408,6 +447,7 @@
       box-shadow: 0 2px 8px #0003;
       cursor: pointer;
       transition: transform .2s ease, background .2s ease;
+      animation: pulse 2.6s infinite ease-in-out;
     }
 
     .map-marker.active {
@@ -448,6 +488,22 @@
     .small { font-size: 12px; color: #d9e7dc; }
     [hidden] { display: none !important; }
 
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(17, 93, 60, 0.28); }
+      50% { box-shadow: 0 0 0 10px rgba(17, 93, 60, 0); }
+    }
+
     @media(max-width:600px) {
       header { position: relative; }
       nav { gap: 7px; }
@@ -474,6 +530,7 @@
       <a href="#timeline">Timeline</a>
       <a href="#people">People</a>
       <a href="#places">Places</a>
+      <a href="#idanre-history">Idanre</a>
       <a href="#interactive-history-map">Maps</a>
       <a href="#search">Search</a>
       <a href="#quiz">Quiz</a>
@@ -705,6 +762,158 @@
       </div>
     </section>
 
+    <section id="idanre-history" style="background:#f7f9f5;padding:50px 0;">
+      <div class="container">
+        <div class="section-title">
+          <span class="kicker">Ondo State · Yoruba Heritage</span>
+          <h2>The History of Idanre</h2>
+          <p>Exploring the people, traditions, royal institution and heritage of Idanre.</p>
+        </div>
+
+        <article class="card searchable" data-search="Idanre history Owa kings Yoruba origins oral traditions Idanre Hills Odode Idanre Ondo State">
+          <div class="card-content">
+            <span class="tag">Community History</span>
+            <h3>Origins and Historical Traditions</h3>
+
+            <p>
+              Idanre is a historic Yoruba community in present-day Ondo State,
+              southwestern Nigeria. Its history is preserved through oral
+              traditions, cultural practices, traditional institutions and
+              historical scholarship.
+            </p>
+
+            <p>
+              Accounts of Idanre's origins include traditions connecting its
+              people with the wider Yoruba historical world. Such accounts
+              should be studied alongside local oral histories and documentary
+              evidence because different traditions may explain the community's
+              beginnings in different ways.
+            </p>
+          </div>
+        </article>
+
+        <article class="card searchable" data-search="Owa of Idanre traditional ruler kingship palace chiefs royal succession">
+          <div class="card-content">
+            <span class="tag">Traditional Institution</span>
+            <h3>The Owa of Idanre</h3>
+
+            <p>
+              The Owa is the traditional ruler of Idanre. The royal institution
+              forms an important part of the community's political and cultural
+              heritage.
+            </p>
+
+            <p>
+              Research into the Owa institution should consider royal traditions,
+              the responsibilities of traditional authorities, relationships
+              with community chiefs, and the ways leadership and local
+              administration have changed over time.
+            </p>
+          </div>
+        </article>
+
+        <article class="card searchable" data-search="Idanre Owa kings royal succession dynasty reign dates monarchs">
+          <div class="card-content">
+            <span class="tag">Royal History</span>
+            <h3>The Succession of Owa Kings</h3>
+
+            <p>
+              The succession of Idanre's Owa kings deserves a dedicated
+              historical record. Each ruler's name, alternative spelling,
+              accession, reign dates and relationship to the preceding ruler
+              should be checked against reliable local and documentary sources.
+            </p>
+
+            <p>
+              A complete chronological list has not been included here because
+              the available evidence must first be checked. This avoids
+              presenting an unverified royal genealogy as established fact.
+            </p>
+
+            <p>
+              <strong>Research priority:</strong> Consult the palace's
+              historical records, documented oral traditions, relevant
+              archival reports and scholarly publications.
+            </p>
+          </div>
+        </article>
+
+        <article class="card searchable" data-search="Idanre Hills old settlement cultural landscape Yoruba heritage">
+          <div class="card-content">
+            <span class="tag">Landscape and Heritage</span>
+            <h3>The Idanre Hills and Historic Settlement</h3>
+
+            <p>
+              The Idanre Hills are a distinctive landscape associated with
+              Idanre's cultural identity and settlement history. The historic
+              settlement and its landscape offer important opportunities to
+              study how communities interacted with their physical environment.
+            </p>
+
+            <p>
+              Historical accounts of settlement, movement and community life
+              should be considered alongside archaeological evidence, local
+              knowledge and documented traditions.
+            </p>
+          </div>
+        </article>
+
+        <article class="card searchable" data-search="Idanre precolonial economy farming family cooperation age groups colonial cocoa">
+          <div class="card-content">
+            <span class="tag">Social and Economic History</span>
+            <h3>Life in Precolonial Idanre</h3>
+
+            <p>
+              Historical research describes precolonial Idanre as a society
+              in which household farming, cooperation among family members,
+              age groups and communal production were important to economic
+              and social life.
+            </p>
+
+            <p>
+              The colonial period brought significant changes to the local
+              economy, including the expansion of cocoa production and
+              commercial agriculture.
+            </p>
+          </div>
+        </article>
+
+        <article class="card searchable" data-search="Idanre history research sources Felix Oludare Ajiola oral traditions">
+          <div class="card-content">
+            <span class="tag">Further Reading</span>
+            <h3>Research and Historical Sources</h3>
+
+            <p>
+              Felix Oludare Ajiola, "Indigenous Social and Economic Structure
+              in Precolonial Idanreland," Nigerian Journal of Economic History,
+              published in the journal's volume 13, associated with 2015.
+            </p>
+
+            <p>
+              <a href="https://ir.unilag.edu.ng/items/9d5169ab-9bc1-4d20-addc-4fdfbf8ff7fb"
+                 target="_blank" rel="noopener noreferrer">
+                Read the research record at the University of Lagos Repository
+              </a>
+            </p>
+
+            <p>
+              Felix Oludare Ajiola, "Orality and Mythology: Reconstructing the
+              Traditions of Origin of Ondo and Idanre People of Southwestern
+              Nigeria," Sources: Materials &amp; Fieldwork in African Studies,
+              2025.
+            </p>
+
+            <p>
+              <a href="https://journals.openedition.org/sources/2657"
+                 target="_blank" rel="noopener noreferrer">
+                Explore the scholarly publication
+              </a>
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section id="interactive-history-map" class="history-section">
       <div class="container">
         <div class="section-title">
@@ -805,6 +1014,9 @@
         </div>
 
         <div class="quiz-box">
+          <div class="quiz-progress-bar" aria-hidden="true">
+            <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+          </div>
           <div id="quiz-progress">Question 1 of 5</div>
           <h3 id="quiz-question">In which year did Nigeria gain independence?</h3>
           <div id="quiz-options"></div>
@@ -1045,6 +1257,12 @@
     const quizScoreDisplay = document.getElementById("quiz-score");
     const nextQuestionButton = document.getElementById("next-question");
     const restartQuizButton = document.getElementById("restart-quiz");
+    const quizProgressFill = document.getElementById("quiz-progress-fill");
+
+    function updateProgressBar() {
+      const progressPercentage = ((currentQuestion + (questionAnswered ? 1 : 0)) / quizQuestions.length) * 100;
+      if (quizProgressFill) { quizProgressFill.style.width = Math.max(progressPercentage, 20) + "%"; }
+    }
 
     function showQuestion() {
       const question = quizQuestions[currentQuestion];
@@ -1058,6 +1276,7 @@
       nextQuestionButton.hidden = true;
       restartQuizButton.hidden = true;
       quizScoreDisplay.textContent = "Score: " + quizScore;
+      updateProgressBar();
 
       question.options.forEach(function(optionText, index) {
         const button = document.createElement("button");
@@ -1079,12 +1298,17 @@
           }
 
           quizScoreDisplay.textContent = "Score: " + quizScore;
+          updateProgressBar();
 
           Array.from(quizOptions.children).forEach(function(optionButton, optionIndex) {
             optionButton.disabled = true;
             if (optionIndex === question.answer) {
               optionButton.style.borderColor = "#087443";
               optionButton.style.background = "#e5f3e9";
+            }
+            if (optionIndex === index && optionIndex !== question.answer) {
+              optionButton.style.borderColor = "#9a7a2a";
+              optionButton.style.background = "#fff6de";
             }
           });
 
@@ -1113,6 +1337,7 @@
 
           nextQuestionButton.hidden = true;
           restartQuizButton.hidden = false;
+          if (quizProgressFill) quizProgressFill.style.width = "100%";
         }
       });
     }

@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+}<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -393,6 +394,141 @@ footer a {
   .container {
     padding: 28px 16px;
   }
+  /* Nigeria History Explorer: Design Upgrade */
+
+body {
+  background: #f0f5f1;
+  color: #203329;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background: linear-gradient(120deg, #034525, #0b8050);
+  border-bottom: 3px solid #f4c542;
+}
+
+.logo {
+  letter-spacing: 0.3px;
+}
+
+.hero {
+  background:
+    radial-gradient(circle at top right, #ffffff20, transparent 35%),
+    linear-gradient(135deg, #023d25, #087443 65%, #15945a);
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+.hero h1 {
+  text-shadow: 0 3px 12px #00000025;
+}
+
+.hero p {
+  line-height: 1.9;
+}
+
+.button {
+  box-shadow: 0 4px 12px #00000015;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px #00000020;
+}
+
+.stat {
+  border-bottom: 4px solid #087443;
+  transition: transform 0.2s;
+}
+
+.stat:hover {
+  transform: translateY(-4px);
+}
+
+.section-title {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 65px;
+  height: 4px;
+  margin-top: 8px;
+  border-radius: 5px;
+  background: #f4c542;
+}
+
+.card {
+  border-radius: 15px;
+  border-top: 3px solid #0b8050;
+  box-shadow: 0 6px 22px #123c2710;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px #123c2720;
+}
+
+.card h3 {
+  line-height: 1.4;
+}
+
+.card p {
+  color: #46594d;
+}
+
+.tag {
+  letter-spacing: 0.3px;
+}
+
+.search-box {
+  border-radius: 12px;
+  box-shadow: 0 4px 15px #123c2708;
+}
+
+.search-box:focus {
+  border-color: #087443;
+}
+
+.timeline {
+  border-left-color: #0b8050;
+}
+
+.timeline-item::before {
+  box-shadow: 0 0 0 4px #e0f2e6;
+}
+
+.quiz-box {
+  border-top: 4px solid #f4c542;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px #123c2710;
+}
+
+.quiz-option {
+  border-radius: 9px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+footer {
+  background: linear-gradient(135deg, #073b25, #034525);
+  border-top: 4px solid #f4c542;
+  line-height: 1.9;
+}
+
+@media (max-width: 650px) {
+  .hero {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .card {
+    padding: 21px;
+  }
+}
 }
 </style>
 </head>

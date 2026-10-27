@@ -1,1129 +1,676 @@
 
-}<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore Nigeria's rich history, ancient civilizations, kingdoms, colonial era, independence and modern democracy.">
-<title>Nigeria History Explorer | Discover Our Past</title>
+<meta name="theme-color" content="#075b38">
+<meta name="description" content="Explore Nigeria's rich history, ancient kingdoms, independence, historical figures and modern democracy.">
+<title>Nigeria History Explorer | Discover Our Heritage</title>
 
 <style>
 :root {
   --green: #087443;
-  --dark-green: #064b2c;
-  --light-green: #e9f7ef;
-  --gold: #f4c542;
-  --dark: #17251d;
+  --dark: #064b30;
+  --gold: #e6b84c;
+  --cream: #fffaf0;
   --white: #ffffff;
-  --muted: #66756b;
-  --background: #f6f8f6;
+  --ink: #18352a;
+  --muted: #64756b;
+  --shadow: 0 8px 28px rgba(0,0,0,.09);
 }
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 85px;
-}
-
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: var(--background);
-  color: var(--dark);
-  line-height: 1.7;
+  color: var(--ink);
+  background: #f7f9f5;
+  line-height: 1.65;
 }
-
+a { color: inherit; }
 header {
-  background: var(--dark-green);
+  background: var(--dark);
   color: white;
-  padding: 15px 5%;
+  padding: 12px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
   position: sticky;
   top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 10px #0002;
+  z-index: 10;
+  box-shadow: 0 3px 12px #0002;
 }
-
-.header-inner {
-  max-width: 1150px;
-  margin: auto;
+.brand {
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
   align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.logo {
-  font-size: 20px;
   font-weight: bold;
-}
-
-.logo span {
-  color: var(--gold);
-}
-
-nav {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: var(--gold);
-}
-
-.hero {
-  background: linear-gradient(135deg, #064b2c, #087443);
-  color: white;
-  text-align: center;
-  padding: 85px 20px;
-}
-
-.hero .eyebrow {
-  color: var(--gold);
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 2px;
-  font-size: 13px;
-}
-
-.hero h1 {
-  font-size: clamp(32px, 6vw, 58px);
-  line-height: 1.15;
-  margin: 18px auto;
-  max-width: 850px;
-}
-
-.hero p {
-  max-width: 720px;
-  margin: 0 auto 25px;
-  color: #e8f5ed;
   font-size: 17px;
 }
-
-.button {
-  display: inline-block;
-  background: var(--gold);
-  color: #193522;
-  padding: 12px 22px;
-  border-radius: 7px;
-  text-decoration: none;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  font-size: 15px;
-}
-
-.button:hover {
-  opacity: 0.9;
-}
-
-.stats {
+.logo {
+  width: 46px;
+  height: 46px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  max-width: 900px;
-  margin: -30px auto 25px;
-  padding: 0 15px;
-  position: relative;
-}
-
-.stat {
-  background: white;
-  padding: 20px 10px;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px #0000000d;
-}
-
-.stat strong {
-  display: block;
+  place-items: center;
+  background: #fff;
+  color: var(--green);
   font-size: 25px;
-  color: var(--green);
 }
-
-.stat span {
+nav { display: flex; flex-wrap: wrap; gap: 12px; }
+nav a {
+  text-decoration: none;
+  color: white;
   font-size: 13px;
-  color: var(--muted);
+  padding: 5px;
 }
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 35px 20px;
+nav a:hover { color: var(--gold); }
+.hero {
+  padding: 75px 7% 70px;
+  color: white;
+  background:
+    linear-gradient(100deg,rgba(2,48,29,.96),rgba(3,88,49,.76)),
+    url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1800&q=85") center/cover;
 }
-
-.section-title {
-  font-size: clamp(25px, 4vw, 35px);
-  margin-bottom: 10px;
-  color: var(--dark-green);
-}
-
-.section-intro {
-  color: var(--muted);
-  margin-bottom: 25px;
-  max-width: 750px;
-}
-
-.search-box {
-  display: block;
-  width: 100%;
-  max-width: 650px;
-  padding: 15px;
-  border: 2px solid #d8e5dc;
-  border-radius: 8px;
-  font-size: 16px;
-  margin: 20px 0 25px;
-  background: white;
-}
-
-.search-box:focus {
-  outline: 2px solid var(--green);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: white;
-  padding: 24px;
-  border-radius: 12px;
-  border: 1px solid #e3ebe5;
-  box-shadow: 0 3px 12px #00000008;
-  transition: transform 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-3px);
-}
-
-.card .icon {
-  font-size: 32px;
-  margin-bottom: 8px;
-}
-
-.card h3 {
-  color: var(--green);
-  margin-bottom: 10px;
-  font-size: 21px;
-}
-
-.card p {
-  margin-bottom: 12px;
-}
-
-.tag {
-  display: inline-block;
-  background: var(--light-green);
-  color: var(--dark-green);
-  padding: 4px 10px;
-  border-radius: 20px;
+.hero-inner { max-width: 850px; }
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
-  margin-bottom: 12px;
+  letter-spacing: 3px;
 }
-
-.note {
-  border-left: 5px solid var(--gold);
-  background: #fff9e6;
-  padding: 18px;
-  margin-top: 25px;
-  border-radius: 5px;
+h1 { font-size: clamp(34px,7vw,64px); line-height: 1.12; margin: 15px 0; }
+.hero p { max-width: 650px; font-size: 17px; color: #f0f6f0; }
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: #18352a;
+  padding: 12px 19px;
+  border-radius: 7px;
+  text-decoration: none;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 8px 5px 0 0;
 }
-
+.btn-outline {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+.container { width: 90%; max-width: 1150px; margin: auto; }
+section { padding: 52px 0; scroll-margin-top: 85px; }
+.section-title { text-align: center; margin-bottom: 30px; }
+.section-title h2 { font-size: clamp(25px,4vw,36px); margin: 5px 0; }
+.section-title p { color: var(--muted); margin: 0 auto; max-width: 700px; }
+.kicker { color: var(--green); font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: 12px; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+  gap: 14px;
+  margin-top: -24px;
+  position: relative;
+}
+.stat {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.stat strong { display: block; font-size: 27px; color: var(--green); }
+.stat span { font-size: 13px; color: var(--muted); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+  gap: 20px;
+}
+.card {
+  background: white;
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid #e6ece5;
+}
+.card img { width: 100%; height: 185px; object-fit: cover; display: block; }
+.card-content { padding: 19px; }
+.card h3 { margin: 5px 0 9px; }
+.card p { color: #52665b; font-size: 14px; }
+.tag {
+  display: inline-block;
+  background: #e5f3e9;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 9px;
+  border-radius: 20px;
+}
 .timeline {
-  border-left: 4px solid var(--green);
-  margin: 30px 0 20px 10px;
+  border-left: 3px solid var(--gold);
+  margin: 25px auto;
+  max-width: 850px;
   padding-left: 25px;
 }
-
-.timeline-item {
+.event {
   position: relative;
-  padding: 0 0 28px;
+  background: white;
+  padding: 18px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
 }
-
-.timeline-item::before {
+.event:before {
   content: "";
   position: absolute;
-  left: -35px;
-  top: 7px;
+  left: -34px;
+  top: 22px;
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: var(--gold);
-  border: 3px solid var(--green);
+  background: var(--green);
+  border: 3px solid white;
+  outline: 2px solid var(--gold);
 }
-
-.timeline-item h3 {
-  color: var(--green);
-  margin-bottom: 5px;
-}
-
-.quiz-box {
-  background: white;
-  border: 1px solid #e3ebe5;
-  border-radius: 12px;
+.event time { color: var(--green); font-weight: bold; }
+.event h3 { margin: 4px 0; }
+.search-panel {
+  background: #eaf4eb;
   padding: 25px;
+  border-radius: 15px;
+}
+input[type="search"], select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #cbd8cc;
+  border-radius: 7px;
+  background: white;
+  font-size: 16px;
+}
+.result {
+  background: white;
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 8px;
+}
+.result h3 { margin: 0; }
+.quiz-box {
   max-width: 750px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
 }
-
-.quiz-question {
-  font-size: 19px;
-  font-weight: bold;
-  margin: 15px 0;
-}
-
-.quiz-option {
+.option {
   display: block;
   width: 100%;
+  padding: 12px;
+  margin: 9px 0;
+  border: 1px solid #d8e2d8;
+  border-radius: 8px;
+  background: #fff;
   text-align: left;
-  padding: 13px;
-  background: #f5f8f5;
-  border: 1px solid #dce7de;
-  border-radius: 7px;
-  margin: 10px 0;
   cursor: pointer;
   font-size: 15px;
 }
-
-.quiz-option:hover {
-  background: var(--light-green);
-}
-
-.quiz-option:disabled {
-  cursor: default;
-  color: var(--dark);
-}
-
-.quiz-option.correct {
-  background: #d6f5df;
-  border-color: #258748;
-}
-
-.quiz-option.wrong {
-  background: #ffe3e3;
-  border-color: #cc4444;
-}
-
-#quiz-feedback {
-  margin: 15px 0;
-  font-weight: bold;
-}
-
-footer {
-  background: #123c27;
-  color: white;
-  text-align: center;
-  padding: 30px 20px;
-  margin-top: 30px;
-}
-
-footer p {
-  margin: 5px 0;
-}
-
-footer a {
-  color: var(--gold);
-}
-
-.hidden {
-  display: none !important;
-}
-
-@media (max-width: 650px) {
-  .header-inner {
-    justify-content: center;
-  }
-
-  .logo {
-    width: 100%;
-    text-align: center;
-  }
-
-  nav {
-    justify-content: center;
-    gap: 12px;
-  }
-
-  nav a {
-    font-size: 12px;
-  }
-
-  .hero {
-    padding: 65px 18px;
-  }
-
-  .hero p {
-    font-size: 15px;
-  }
-
-  .stats {
-    gap: 8px;
-  }
-
-  .stat {
-    padding: 15px 5px;
-  }
-
-  .stat strong {
-    font-size: 20px;
-  }
-
-  .stat span {
-    font-size: 11px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .container {
-    padding: 28px 16px;
-  }
-  /* Nigeria History Explorer: Design Upgrade */
-
-body {
-  background: #f0f5f1;
-  color: #203329;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-header {
-  background: linear-gradient(120deg, #034525, #0b8050);
-  border-bottom: 3px solid #f4c542;
-}
-
-.logo {
-  letter-spacing: 0.3px;
-}
-
-.hero {
-  background:
-    radial-gradient(circle at top right, #ffffff20, transparent 35%),
-    linear-gradient(135deg, #023d25, #087443 65%, #15945a);
-  padding-top: 95px;
-  padding-bottom: 95px;
-}
-
-.hero h1 {
-  text-shadow: 0 3px 12px #00000025;
-}
-
-.hero p {
-  line-height: 1.9;
-}
-
-.button {
-  box-shadow: 0 4px 12px #00000015;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 7px 18px #00000020;
-}
-
-.stat {
-  border-bottom: 4px solid #087443;
-  transition: transform 0.2s;
-}
-
-.stat:hover {
-  transform: translateY(-4px);
-}
-
-.section-title {
-  position: relative;
-  padding-bottom: 10px;
-}
-
-.section-title::after {
-  content: "";
-  display: block;
-  width: 65px;
-  height: 4px;
-  margin-top: 8px;
-  border-radius: 5px;
-  background: #f4c542;
-}
-
-.card {
+.option:hover { background: #e9f5eb; }
+.option:disabled { cursor: default; }
+#feedback { font-weight: bold; margin-top: 12px; }
+.map-panel {
+  background: #e5f0e4;
   border-radius: 15px;
-  border-top: 3px solid #0b8050;
-  box-shadow: 0 6px 22px #123c2710;
-  transition: transform 0.25s, box-shadow 0.25s;
+  padding: 25px;
 }
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 28px #123c2720;
+.map-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 12px;
 }
-
-.card h3 {
-  line-height: 1.4;
-}
-
-.card p {
-  color: #46594d;
-}
-
-.tag {
-  letter-spacing: 0.3px;
-}
-
-.search-box {
-  border-radius: 12px;
-  box-shadow: 0 4px 15px #123c2708;
-}
-
-.search-box:focus {
-  border-color: #087443;
-}
-
-.timeline {
-  border-left-color: #0b8050;
-}
-
-.timeline-item::before {
-  box-shadow: 0 0 0 4px #e0f2e6;
-}
-
-.quiz-box {
-  border-top: 4px solid #f4c542;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px #123c2710;
-}
-
-.quiz-option {
+.map-links a {
+  background: white;
+  padding: 16px;
   border-radius: 9px;
-  transition: background 0.2s, border-color 0.2s;
+  text-decoration: none;
+  border: 1px solid #dce7dc;
 }
-
+.map-links a:hover { border-color: var(--green); }
+.notice {
+  border-left: 4px solid var(--gold);
+  padding: 12px 16px;
+  background: #fff8e5;
+  font-size: 13px;
+}
 footer {
-  background: linear-gradient(135deg, #073b25, #034525);
-  border-top: 4px solid #f4c542;
-  line-height: 1.9;
+  background: #063c28;
+  color: white;
+  padding: 32px 5%;
+  text-align: center;
 }
-
-@media (max-width: 650px) {
-  .hero {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-
-  .card {
-    padding: 21px;
-  }
-}
+footer p { margin: 5px; }
+footer strong { color: var(--gold); }
+.small { font-size: 12px; color: #d9e7dc; }
+[hidden] { display: none !important; }
+@media(max-width:600px) {
+  header { position: relative; }
+  nav { gap: 7px; }
+  nav a { font-size: 12px; }
+  .hero { padding: 55px 6%; }
+  section { padding: 40px 0; }
+  .container { width: 92%; }
 }
 </style>
 </head>
 
 <body>
-
 <header>
-  <div class="header-inner">
-    <div class="logo">🇳🇬 Nigeria <span>History Explorer</span></div>
-
-    <nav aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#history">History</a>
-      <a href="#timeline">Timeline</a>
-      <a href="#quiz">Quiz</a>
-      <a href="#sources">Sources</a>
-    </nav>
-  </div>
+  <a href="#home" class="brand" style="text-decoration:none">
+    <span class="logo" aria-hidden="true">🇳🇬</span>
+    <span>NIGERIA HISTORY<br>EXPLORER</span>
+  </a>
+  <nav aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#history">History</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#places">Places</a>
+    <a href="#maps">Maps</a>
+    <a href="#quiz">Quiz</a>
+  </nav>
 </header>
 
 <main>
-
 <section class="hero" id="home">
-  <p class="eyebrow">Discover our past. Understand our present.</p>
-
-  <h1>Explore the Rich History of Nigeria</h1>
-
-  <p>
-    Travel through centuries of Nigerian history, from ancient
-    civilizations and powerful kingdoms to independence and modern
-    democracy. Discover the people, events and ideas that shaped
-    our nation.
-  </p>
-
-  <a href="#history" class="button">Start Exploring →</a>
+  <div class="hero-inner">
+    <span class="eyebrow">Our past. Our identity. Our future.</span>
+    <h1>Discover the Story of Nigeria</h1>
+    <p>
+      Journey through ancient kingdoms, great leaders, colonial rule,
+      independence and the making of modern Nigeria. Explore the
+      events and people who shaped our nation.
+    </p>
+    <a class="btn" href="#history">Explore Our History →</a>
+    <a class="btn btn-outline" href="#quiz">Test Your Knowledge</a>
+  </div>
 </section>
 
-<div class="stats">
-  <div class="stat">
-    <strong>36</strong>
-    <span>States</span>
-  </div>
-
-  <div class="stat">
-    <strong>1960</strong>
-    <span>Year of Independence</span>
-  </div>
-
-  <div class="stat">
-    <strong>1999</strong>
-    <span>Current Democratic Era Began</span>
+<div class="container">
+  <div class="stats">
+    <div class="stat"><strong>1960</strong><span>Independence</span></div>
+    <div class="stat"><strong>1914</strong><span>Amalgamation</span></div>
+    <div class="stat"><strong>36</strong><span>States today</span></div>
+    <div class="stat"><strong>1</strong><span>Federal capital territory</span></div>
   </div>
 </div>
 
-<section class="container" id="history">
-  <h2 class="section-title">Discover Nigeria's History</h2>
+<section id="history">
+  <div class="container">
+    <div class="section-title">
+      <span class="kicker">Explore the eras</span>
+      <h2>A Journey Through Time</h2>
+      <p>From early civilizations to today's democratic republic, discover the many chapters of Nigerian history.</p>
+    </div>
 
-  <p class="section-intro">
-    Search for a topic or explore the historical periods below.
-    Nigerian history includes many peoples, languages, cultures
-    and political traditions.
-  </p>
+    <div class="grid" id="eraCards">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=800&q=80" alt="Traditional African art">
+        <div class="card-content">
+          <span class="tag">Before 1500</span>
+          <h3>Ancient Civilizations</h3>
+          <p>Explore Nok culture, the ancient city-states, Ife's remarkable art and the powerful Benin Kingdom.</p>
+          <a href="#timeline">Explore the timeline →</a>
+        </div>
+      </article>
 
-  <input
-    type="search"
-    id="history-search"
-    class="search-box"
-    placeholder="🔎 Search history, kingdoms, dates..."
-    aria-label="Search historical topics"
-  >
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=800&q=80" alt="African landscape">
+        <div class="card-content">
+          <span class="tag">Medieval era</span>
+          <h3>Kingdoms and Empires</h3>
+          <p>Learn about Kanem-Bornu, the Sokoto Caliphate, Oyo Empire, Hausa states and the Niger Delta communities.</p>
+          <a href="#timeline">Discover the kingdoms →</a>
+        </div>
+      </article>
 
-  <div class="grid" id="history-cards">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=800&q=80" alt="African community">
+        <div class="card-content">
+          <span class="tag">1800s–1960</span>
+          <h3>Colonial Rule</h3>
+          <p>Understand British expansion, the 1914 amalgamation, resistance movements and the struggle for self-government.</p>
+          <a href="#timeline">Read the history →</a>
+        </div>
+      </article>
 
-    <article class="card searchable">
-      <div class="icon">🏺</div>
-      <span class="tag">Ancient Civilizations</span>
-      <h3>1. Early Nigerian Societies</h3>
-      <p>
-        Human communities have lived in the region now called Nigeria
-        for thousands of years. Archaeological discoveries, including
-        the famous Dufuna canoe, provide evidence of early life and
-        technological skills.
-      </p>
-      <p>
-        The Nok culture, known especially for its terracotta sculptures
-        and early ironworking evidence, flourished in parts of central
-        Nigeria during the first millennium BCE and the first
-        millennium CE.
-      </p>
-    </article>
-
-    <article class="card searchable">
-      <div class="icon">👑</div>
-      <span class="tag">Kingdoms and Empires</span>
-      <h3>2. Great Nigerian Kingdoms</h3>
-      <p>
-        Before colonial rule, the region contained influential
-        political and cultural centers. The Kingdom of Benin became
-        famous for its court art and bronze and brass works.
-      </p>
-      <p>
-        Ile-Ife became a major center of Yoruba culture and remarkable
-        artistic traditions. The Oyo Empire developed an influential
-        political system, while Kanem-Bornu and other northern states
-        participated in regional trade and scholarship.
-      </p>
-    </article>
-
-    <article class="card searchable">
-      <div class="icon">📚</div>
-      <span class="tag">Trade and Scholarship</span>
-      <h3>3. Trade, Religion and Culture</h3>
-      <p>
-        Communities across the region developed trade networks linking
-        markets, farming areas and long-distance commercial routes.
-        Trans-Saharan trade connected northern communities with North
-        Africa and wider commercial networks.
-      </p>
-      <p>
-        Islam spread through parts of northern Nigeria over many
-        centuries. Christianity later expanded in many southern
-        communities, particularly through nineteenth-century missions
-        and subsequent developments.
-      </p>
-    </article>
-
-    <article class="card searchable">
-      <div class="icon">🗺️</div>
-      <span class="tag">Colonial Period</span>
-      <h3>4. British Colonial Rule</h3>
-      <p>
-        British political and commercial influence expanded during
-        the nineteenth century. Following military campaigns and
-        colonial agreements, Britain established control over
-        territories that became Nigeria.
-      </p>
-      <p>
-        The Northern and Southern Protectorates were amalgamated in
-        1914 under Frederick Lugard. Colonial administration changed
-        political institutions and the economy, while Nigerians
-        continued to resist, negotiate and demand greater rights.
-      </p>
-    </article>
-
-    <article class="card searchable">
-      <div class="icon">🇳🇬</div>
-      <span class="tag">Independence</span>
-      <h3>5. The Road to Freedom</h3>
-      <p>
-        Nigerian nationalists, workers, journalists, students,
-        traditional leaders and political organizations contributed
-        to the struggle for self-government.
-      </p>
-      <p>
-        Nigeria became independent on 1 October 1960. Nnamdi Azikiwe
-        became Governor-General, while Abubakar Tafawa Balewa served
-        as Prime Minister. Nigeria became a republic in 1963.
-      </p>
-    </article>
-
-    <article class="card searchable">
-      <div class="icon">⚔️</div>
-      <span class="tag">Conflict and Change</span>
-      <h3>6. Civil War and Reconstruction</h3>
-      <p>
-        Political crises, military coups and regional tensions
-        preceded the Nigerian Civil War of 1967–1970, fought between
-        the Federal Government and the secessionist state of Biafra.
-      </p>
-      <p>
-        The war caused enormous suffering and loss of life.
-        It ended in January 1970 with the surrender of Biafran forces.
-        Postwar reconstruction and national reconciliation became
-        major challenges.
-      </p>
-    </article>
-
-    <article class="card searchable">
-      <div class="icon">🗳️</div>
-      <span class="tag">Democracy</span>
-      <h3>7. Military Rule and Democratic Return</h3>
-      <p>
-        Nigeria experienced several periods of military government
-        after independence, alongside brief civilian administrations.
-        These years shaped debates about constitutional government,
-        civil liberties and national unity.
-      </p>
-      <p>
-        Civilian democratic government returned on 29 May 1999,
-        beginning the current continuous period of the Fourth
-        Republic.
-      </p>
-    </article>
-
-    <article class="card searchable">
-      <div class="icon">🌍</div>
-      <span class="tag">Contemporary Nigeria</span>
-      <h3>8. Nigeria in the Modern World</h3>
-      <p>
-        Contemporary Nigeria is a federal republic with 36 states
-        and the Federal Capital Territory, Abuja. Its people
-        contribute to agriculture, business, science, education,
-        technology, sports, literature and the arts.
-      </p>
-      <p>
-        The country continues to address challenges involving
-        security, economic development, public services, governance
-        and social inclusion, while its citizens work toward
-        different visions for the nation's future.
-      </p>
-    </article>
-
-  </div>
-
-  <p id="no-results" class="note hidden">
-    No matching topic was found. Try another word, such as
-    "Benin", "independence" or "democracy".
-  </p>
-
-  <div class="note">
-    <strong>Historical reminder:</strong> Nigeria's history is not
-    the story of one people alone. It includes many societies whose
-    experiences, achievements and perspectives deserve to be studied.
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1489493585363-d69421e0edd3?auto=format&fit=crop&w=800&q=80" alt="City buildings">
+        <div class="card-content">
+          <span class="tag">1960–today</span>
+          <h3>Independent Nigeria</h3>
+          <p>Explore independence, the First Republic, military governments, the civil war and the return to democracy.</p>
+          <a href="#timeline">Continue the journey →</a>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
-<section class="container" id="timeline">
-  <h2 class="section-title">Nigeria: A Historical Timeline</h2>
-
-  <p class="section-intro">
-    Explore some important dates and turning points in Nigerian
-    history. Earlier dates are approximate where indicated.
-  </p>
-
-  <div class="timeline">
-
-    <div class="timeline-item">
-      <h3>c. 1500 BCE–500 CE — Nok Culture</h3>
-      <p>
-        Archaeological evidence of Nok culture includes distinctive
-        terracotta sculptures and evidence of ironworking in parts
-        of central Nigeria. Dating and interpretations vary by site.
-      </p>
+<section id="timeline" style="background:#fff">
+  <div class="container">
+    <div class="section-title">
+      <span class="kicker">Important milestones</span>
+      <h2>Nigeria's Historical Timeline</h2>
+      <p>Follow key events that influenced the development of Nigeria.</p>
     </div>
 
-    <div class="timeline-item">
-      <h3>Medieval Centuries — Regional Kingdoms</h3>
-      <p>
-        Benin, Ife, Oyo, Kanem-Bornu and numerous other societies
-        developed distinctive political institutions, artistic
-        traditions and trade networks over different periods.
-      </p>
+    <div class="timeline">
+      <article class="event">
+        <time>c. 1500 BCE onward</time>
+        <h3>Nok Culture</h3>
+        <p>The Nok culture is famous for its terracotta sculptures and early ironworking. Its dates and development remain subjects of research.</p>
+      </article>
+      <article class="event">
+        <time>c. 1100–1400 CE</time>
+        <h3>Ile-Ife's Artistic Traditions</h3>
+        <p>Ile-Ife became a major Yoruba cultural and political centre, renowned for extraordinary naturalistic sculptures.</p>
+      </article>
+      <article class="event">
+        <time>Before colonial rule</time>
+        <h3>Powerful African States</h3>
+        <p>The Benin Kingdom, Oyo Empire, Kanem-Bornu and other states developed distinctive political systems, trade networks and cultures.</p>
+      </article>
+      <article class="event">
+        <time>1804 onward</time>
+        <h3>Fulani Jihad and Sokoto Caliphate</h3>
+        <p>The movement led by Usman dan Fodio transformed political and religious life across much of northern Nigeria.</p>
+      </article>
+      <article class="event">
+        <time>1914</time>
+        <h3>Amalgamation of Nigeria</h3>
+        <p>British colonial authorities joined the Northern and Southern Protectorates into one administrative colony under Frederick Lugard.</p>
+      </article>
+      <article class="event">
+        <time>1 October 1960</time>
+        <h3>Independence</h3>
+        <p>Nigeria gained independence from Britain, beginning a new chapter as a sovereign country.</p>
+      </article>
+      <article class="event">
+        <time>1 October 1963</time>
+        <h3>Nigeria Becomes a Republic</h3>
+        <p>Nigeria became a republic, replacing the British monarch as its ceremonial head of state.</p>
+      </article>
+      <article class="event">
+        <time>1967–1970</time>
+        <h3>Nigerian Civil War</h3>
+        <p>The conflict, also known as the Biafran War, caused immense suffering and remains an important part of national history.</p>
+      </article>
+      <article class="event">
+        <time>29 May 1999</time>
+        <h3>Return to Civilian Rule</h3>
+        <p>Nigeria returned to civilian democratic government after years of military rule.</p>
+      </article>
+      <article class="event">
+        <time>Today</time>
+        <h3>Modern Nigeria</h3>
+        <p>Nigeria continues to develop through its diverse communities, democratic institutions, arts, education, technology and economic activity.</p>
+      </article>
     </div>
-
-    <div class="timeline-item">
-      <h3>1804 — Sokoto Jihad Begins</h3>
-      <p>
-        Usman dan Fodio led a religious and political movement that
-        resulted in the establishment of the Sokoto Caliphate and
-        major political changes across parts of northern Nigeria.
-      </p>
-    </div>
-
-    <div class="timeline-item">
-      <h3>1851 — British Attack on Lagos</h3>
-      <p>
-        British forces attacked Lagos during a period of expanding
-        British influence. Lagos was subsequently annexed by Britain
-        in 1861.
-      </p>
-    </div>
-
-    <div class="timeline-item">
-      <h3>1914 — Amalgamation</h3>
-      <p>
-        Britain amalgamated the Northern and Southern Protectorates,
-        creating the colonial administrative unit known as Nigeria.
-      </p>
-    </div>
-
-    <div class="timeline-item">
-      <h3>1 October 1960 — Independence</h3>
-      <p>
-        Nigeria became an independent country after British colonial
-        rule.
-      </p>
-    </div>
-
-    <div class="timeline-item">
-      <h3>1 October 1963 — Republic</h3>
-      <p>
-        Nigeria became a republic, replacing the British monarch
-        as its formal head of state.
-      </p>
-    </div>
-
-    <div class="timeline-item">
-      <h3>1967–1970 — Nigerian Civil War</h3>
-      <p>
-        A devastating civil war ended in January 1970 following
-        the surrender of Biafran forces.
-      </p>
-    </div>
-
-    <div class="timeline-item">
-      <h3>29 May 1999 — Fourth Republic</h3>
-      <p>
-        Civilian government returned, beginning Nigeria's current
-        continuous democratic era.
-      </p>
-    </div>
-
   </div>
 </section>
 
-<section class="container" id="quiz">
-  <h2 class="section-title">Test Your Nigerian History Knowledge</h2>
+<section id="people">
+  <div class="container">
+    <div class="section-title">
+      <span class="kicker">People who shaped our story</span>
+      <h2>Historical Figures</h2>
+      <p>Meet some of the people associated with important moments in Nigerian history.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="card-content">
+        <span class="tag">Nationalist</span>
+        <h3>Nnamdi Azikiwe</h3>
+        <p>A leading nationalist and Nigeria's first president after the country became a republic in 1963.</p>
+      </div></article>
+      <article class="card"><div class="card-content">
+        <span class="tag">Nationalist</span>
+        <h3>Herbert Macaulay</h3>
+        <p>An important early Nigerian nationalist who campaigned against aspects of British colonial rule.</p>
+      </div></article>
+      <article class="card"><div class="card-content">
+        <span class="tag">Nationalist</span>
+        <h3>Obafemi Awolowo</h3>
+        <p>A major political leader who advocated federalism and expanded access to education in the Western Region.</p>
+      </div></article>
+      <article class="card"><div class="card-content">
+        <span class="tag">Nationalist</span>
+        <h3>Ahmadu Bello</h3>
+        <p>The Sardauna of Sokoto and premier of Northern Nigeria, influential in the region's political development.</p>
+      </div></article>
+      <article class="card"><div class="card-content">
+        <span class="tag">Women's leadership</span>
+        <h3>Funmilayo Ransome-Kuti</h3>
+        <p>An educator and activist remembered for women's rights and opposition to colonial-era abuses.</p>
+      </div></article>
+      <article class="card"><div class="card-content">
+        <span class="tag">Pre-colonial ruler</span>
+        <h3>Queen Amina of Zazzau</h3>
+        <p>A celebrated ruler in Hausa historical tradition, associated with military leadership and the expansion of Zazzau.</p>
+      </div></article>
+    </div>
+  </div>
+</section>
 
-  <p class="section-intro">
-    Answer these questions and see how much you know about
-    Nigeria's past!
+<section id="places" style="background:#fff">
+  <div class="container">
+    <div class="section-title">
+      <span class="kicker">Discover our heritage</span>
+      <h2>Historical Places in Nigeria</h2>
+      <p>Explore places connected to Nigerian history, culture, archaeology and national memory.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=800&q=80" alt="African sculpture">
+        <div class="card-content"><h3>Ile-Ife, Osun State</h3><p>A historic Yoruba spiritual and cultural centre, renowned for its ancient art and traditions.</p></div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=800&q=80" alt="African natural landscape">
+        <div class="card-content"><h3>Benin City, Edo State</h3><p>The historic centre of the Benin Kingdom, celebrated for its royal court and bronze-casting traditions.</p></div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1489493585363-d69421e0edd3?auto=format&fit=crop&w=800&q=80" alt="Urban landscape">
+        <div class="card-content"><h3>Badagry, Lagos State</h3><p>A major location for understanding the history of the transatlantic slave trade and its legacy.</p></div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=800&q=80" alt="African environment">
+        <div class="card-content"><h3>Jos, Plateau State</h3><p>Home to important archaeological discoveries and the National Museum, which houses Nok-related collections.</p></div>
+      </article>
+    </div>
+    <p class="notice">Some photographs are illustrative rather than verified photographs of the named sites. Historical descriptions are introductory and should be checked against specialist sources.</p>
+  </div>
+</section>
+
+<section id="search">
+  <div class="container">
+    <div class="section-title">
+      <span class="kicker">Learn something new</span>
+      <h2>Search Nigerian History</h2>
+      <p>Search for historical periods, events, kingdoms, leaders and places.</p>
+    </div>
+    <div class="search-panel">
+      <label for="searchInput"><strong>What would you like to discover?</strong></label>
+      <input id="searchInput" type="search" placeholder="Try: independence, Benin, 1914, Azikiwe...">
+      <div id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section id="maps" style="background:#fff">
+  <div class="container">
+    <div class="section-title">
+      <span class="kicker">Explore the geography</span>
+      <h2>Historical Maps & Locations</h2>
+      <p>Open map searches to explore the locations of historic kingdoms, cities and heritage sites.</p>
+    </div>
+    <div class="map-panel">
+      <div class="map-links">
+        <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/Ile-Ife+Osun+Nigeria/"><strong>📍 Ile-Ife</strong><br>Yoruba heritage</a>
+        <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/Benin+City+Edo+Nigeria/"><strong>📍 Benin City</strong><br>Benin Kingdom</a>
+        <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/Sokoto+Nigeria/"><strong>📍 Sokoto</strong><br>Sokoto Caliphate</a>
+        <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/Nok+Village+Kaduna+Nigeria/"><strong>📍 Nok region</strong><br>Archaeological heritage</a>
+        <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/Badagry+Lagos+Nigeria/"><strong>📍 Badagry</strong><br>Slave-trade history</a>
+        <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/National+Museum+Lagos+Nigeria/"><strong>📍 National Museum, Lagos</strong><br>Collections and heritage</a>
+      </div>
+      <p class="small" style="color:#52665b;margin-top:18px">These links open map searches. They are not reconstructed historical boundary maps.</p>
+    </div>
+  </div>
+</section>
+
+<section id="quiz">
+  <div class="container">
+    <div class="section-title">
+      <span class="kicker">Challenge yourself</span>
+      <h2>Nigeria History Quiz</h2>
+      <p>Test your knowledge. Choose an answer to see whether you are correct.</p>
+    </div>
+    <div class="quiz-box">
+      <div id="quizProgress">Question 1 of 8</div>
+      <h3 id="question">When did Nigeria gain independence?</h3>
+      <div id="options"></div>
+      <p id="feedback" aria-live="polite"></p>
+      <button class="btn" id="nextBtn" hidden>Next Question →</button>
+      <p id="score" hidden></p>
+      <button class="btn" id="restartBtn" hidden>Try Again</button>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="background:#fff">
+  <div class="container">
+    <div class="section-title">
+      <span class="kicker">About this project</span>
+      <h2>Preserving Our Shared Heritage</h2>
+      <p>Nigeria History Explorer is an educational project designed to help students, teachers, researchers and curious readers discover the country's rich and diverse past.</p>
+    </div>
+    <div class="notice">
+      
+History is complex. Dates, interpretations and traditions
+can sometimes differ between historical sources. By studying
+multiple sources, we can develop a deeper understanding of
+Nigeria's rich and diverse past.
+</p>
+</div>
+
+<section id="history-today" class="history-section">
+  <h2>Nigeria: From Ancient Times to Today</h2>
+  <p>
+    Explore the major events, kingdoms, cultures, and
+    developments that have shaped Nigeria throughout history.
   </p>
 
-  <div class="quiz-box">
-    <p id="quiz-progress">Question 1 of 5</p>
+  <div class="history-card">
+    <h3>Ancient Civilizations</h3>
+    <p>
+      Discover the Nok culture, famous for its terracotta
+      sculptures, and other early societies that contributed
+      to the development of Nigerian civilization.
+    </p>
+  </div>
 
-    <p class="quiz-question" id="quiz-question">
+  <div class="history-card">
+    <h3>Great Kingdoms and Empires</h3>
+    <p>
+      Learn about the Kingdom of Benin, the Oyo Empire,
+      the Kanem-Borno Empire, and the Hausa city-states.
+    </p>
+  </div>
+
+  <div class="history-card">
+    <h3>Colonial Period</h3>
+    <p>
+      Explore British colonial rule, resistance movements,
+      and the events that led to Nigerian independence
+      on 1 October 1960.
+    </p>
+  </div>
+
+  <div class="history-card">
+    <h3>Independence and the Civil War</h3>
+    <p>
+      Learn about Nigeria's early independence years,
+      the Nigerian Civil War from 1967 to 1970, and
+      the challenges of national unity.
+    </p>
+  </div>
+
+  <div class="history-card">
+    <h3>Modern Nigeria</h3>
+    <p>
+      Discover Nigeria's return to democratic civilian
+      government in 1999 and its continuing political,
+      economic, cultural, and technological development.
+    </p>
+  </div>
+</section>
+
+<section id="historical-maps" class="history-section">
+  <h2>Historical Maps of Nigeria</h2>
+  <p>
+    Maps help us understand how kingdoms, trade routes,
+    colonial boundaries, and modern Nigerian states
+    changed over time.
+  </p>
+  <p>
+    Compare historical maps with modern maps to explore
+    Nigeria's changing geography.
+  </p>
+</section>
+
+<section id="history-quiz" class="history-section">
+  <h2>Test Your Knowledge</h2>
+  <div class="history-card">
+    <p id="quiz-question">
       In what year did Nigeria gain independence?
     </p>
 
-    <div id="quiz-options"></div>
-
-    <p id="quiz-feedback" aria-live="polite"></p>
-
-    <button class="button" id="next-question">
-      Next Question →
+    <button onclick="checkAnswer(1960)">
+      1960
     </button>
+
+    <button onclick="checkAnswer(1957)">
+      1957
+    </button>
+
+    <button onclick="checkAnswer(1963)">
+      1963
+    </button>
+
+    <p id="quiz-feedback"></p>
   </div>
 </section>
-
-<section class="container" id="sources">
-  <h2 class="section-title">Continue Your Research</h2>
-
-  <p class="section-intro">
-    Use reliable historical sources to explore the people, events
-    and debates introduced on this website. Compare accounts and
-    check dates, evidence and different historical perspectives.
-  </p>
-
-  <div class="grid">
-
-    <article class="card">
-      <h3>National Archives of Nigeria</h3>
-      <p>
-        Explore archival records and documents relating to
-        Nigeria's past.
-      </p>
-      <a href="https://nationalarchives.gov.ng/"
-         target="_blank" rel="noopener noreferrer">
-        Visit National Archives →
-      </a>
-    </article>
-
-    <article class="card">
-      <h3>UNESCO</h3>
-      <p>
-        Learn about cultural heritage, archaeology and historical
-        places in Nigeria and across Africa.
-      </p>
-      <a href="https://www.unesco.org/"
-         target="_blank" rel="noopener noreferrer">
-        Visit UNESCO →
-      </a>
-    </article>
-
-    <article class="card">
-      <h3>Encyclopaedia Britannica</h3>
-      <p>
-        Consult reference articles about Nigeria, its geography,
-        history and political development.
-      </p>
-      <a href="https://www.britannica.com/place/Nigeria"
-         target="_blank" rel="noopener noreferrer">
-        Read about Nigeria →
-      </a>
-    </article>
-
-    <article class="card">
-      <h3>Research and Oral History</h3>
-      <p>
-        Seek out academic publications, museum collections,
-        community histories and carefully documented oral
-        traditions. Oral accounts can preserve perspectives
-        missing from written records.
-      </p>
-    </article>
-
-  </div>
-
-  <div class="note">
-    <strong>About this project:</strong> Nigeria History Explorer
-    is an educational project. Its summaries are introductions,
-    not a substitute for detailed historical research. Some dates
-    and interpretations are debated by historians. Always consult
-    additional sources when researching a topic.
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <p><strong>🇳🇬 Nigeria History Explorer</strong></p>
-  <p>Discover our past. Understand our present. Inspire our future.</p>
-  <p>Created for everyone who wants to learn about Nigeria.</p>
-  <p>&copy; <span id="current-year"></span> Nigeria History Explorer</p>
-</footer>
 
 <script>
-/* Search the historical topic cards */
-const searchInput = document.getElementById("history-search");
-const cards = document.querySelectorAll(".searchable");
-const noResults = document.getElementById("no-results");
+function checkAnswer(year) {
+  const feedback =
+    document.getElementById("quiz-feedback");
 
-searchInput.addEventListener("input", function () {
-  const term = this.value.toLowerCase().trim();
-  let visibleCount = 0;
-
-  cards.forEach(function (card) {
-    const matches = card.textContent.toLowerCase().includes(term);
-
-    card.classList.toggle("hidden", !matches);
-
-    if (matches) {
-      visibleCount++;
-    }
-  });
-
-  noResults.classList.toggle("hidden", visibleCount !== 0);
-});
-
-/* History quiz */
-const questions = [
-  {
-    question: "In what year did Nigeria gain independence?",
-    options: ["1957", "1960", "1963", "1970"],
-    answer: 1,
-    explanation: "Nigeria became independent on 1 October 1960."
-  },
-  {
-    question: "Who became Nigeria's first Prime Minister?",
-    options: [
-      "Nnamdi Azikiwe",
-      "Yakubu Gowon",
-      "Abubakar Tafawa Balewa",
-      "Obafemi Awolowo"
-    ],
-    answer: 2,
-    explanation:
-      "Abubakar Tafawa Balewa became the first Prime Minister of independent Nigeria."
-  },
-  {
-    question: "Which year did the amalgamation of Nigeria take place?",
-    options: ["1861", "1900", "1914", "1960"],
-    answer: 2,
-    explanation:
-      "The Northern and Southern Protectorates were amalgamated in 1914."
-  },
-  {
-    question: "When did Nigeria's current continuous democratic era begin?",
-    options: ["1979", "1983", "1993", "1999"],
-    answer: 3,
-    explanation:
-      "Civilian democratic government returned on 29 May 1999."
-  },
-  {
-    question: "Which archaeological culture is famous for terracotta sculptures in central Nigeria?",
-    options: ["Nok", "Roman", "Maya", "Viking"],
-    answer: 0,
-    explanation:
-      "The Nok culture is known for its distinctive terracotta sculptures."
-  }
-];
-
-let questionIndex = 0;
-let score = 0;
-let answered = false;
-
-const questionElement = document.getElementById("quiz-question");
-const optionsElement = document.getElementById("quiz-options");
-const feedbackElement = document.getElementById("quiz-feedback");
-const progressElement = document.getElementById("quiz-progress");
-const nextButton = document.getElementById("next-question");
-
-function showQuestion() {
-  answered = false;
-
-  const question = questions[questionIndex];
-
-  progressElement.textContent =
-    "Question " + (questionIndex + 1) + " of " + questions.length;
-
-  questionElement.textContent = question.question;
-  feedbackElement.textContent = "";
-  optionsElement.innerHTML = "";
-
-  question.options.forEach(function (option, index) {
-    const button = document.createElement("button");
-
-    button.type = "button";
-    button.className = "quiz-option";
-    button.textContent = option;
-
-    button.addEventListener("click", function () {
-      checkAnswer(index, button);
-    });
-
-    optionsElement.appendChild(button);
-  });
-
-  nextButton.textContent =
-    questionIndex === questions.length - 1
-      ? "See My Results"
-      : "Next Question →";
-}
-
-function checkAnswer(selectedIndex, selectedButton) {
-  if (answered) return;
-
-  answered = true;
-
-  const question = questions[questionIndex];
-  const optionButtons = optionsElement.querySelectorAll("button");
-
-  optionButtons.forEach(function (button) {
-    button.disabled = true;
-  });
-
-  if (selectedIndex === question.answer) {
-    score++;
-    selectedButton.classList.add("correct");
-    feedbackElement.textContent = "Correct! " + question.explanation;
+  if (year === 1960) {
+    feedback.textContent =
+      "Correct! Nigeria gained independence on 1 October 1960.";
   } else {
-    selectedButton.classList.add("wrong");
-    optionButtons[question.answer].classList.add("correct");
-    feedbackElement.textContent = "Not quite. " + question.explanation;
+    feedback.textContent =
+      "Not quite. Try again! Nigeria gained independence in 1960.";
   }
 }
-
-nextButton.addEventListener("click", function () {
-  if (!answered) {
-    feedbackElement.textContent = "Please choose an answer first.";
-    return;
-  }
-
-  if (questionIndex < questions.length - 1) {
-    questionIndex++;
-    showQuestion();
-  } else {
-    showResults();
-  }
-});
-
-function showResults() {
-  progressElement.textContent = "Quiz completed!";
-  questionElement.textContent =
-    "You scored " + score + " out of " + questions.length + "!";
-
-  optionsElement.innerHTML = "";
-
-  if (score === questions.length) {
-    feedbackElement.textContent =
-      "Excellent! You answered every question correctly. 🇳🇬";
-  } else if (score >= 3) {
-    feedbackElement.textContent =
-      "Well done! Keep exploring Nigerian history to learn even more.";
-  } else {
-    feedbackElement.textContent =
-      "Keep learning! Explore the history sections above and try again.";
-  }
-
-  nextButton.textContent = "Try Again";
-
-  nextButton.onclick = function () {
-    questionIndex = 0;
-    score = 0;
-    nextButton.onclick = null;
-    showQuestion();
-  };
-}
-
-document.getElementById("current-year").textContent =
-  new Date().getFullYear();
-
-showQuestion();
 </script>
 
+<footer>
+  <p>
+    Nigeria History Explorer | Discover the past,
+    understand the present, and inspire the future.
+  </p>
+</footer>
 </body>
 </html>

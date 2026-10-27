@@ -565,6 +565,276 @@ footer strong { color: var(--gold); }
   </div>
 </section>
 
+<section id="interactive-history-map">
+  <div class="container">
+    <div class="section-title">
+      <span class="kicker">Explore the past</span>
+      <h2>Interactive Map of Historic Nigeria</h2>
+      <p>Choose a kingdom or empire to discover its history and heritage.</p>
+    </div>
+
+    <div class="history-map-layout">
+      <div class="history-map-buttons">
+        <button type="button" class="history-place active"
+          data-place="ife">Ile-Ife</button>
+        <button type="button" class="history-place"
+          data-place="oyo">Oyo Empire</button>
+        <button type="button" class="history-place"
+          data-place="benin">Benin Kingdom</button>
+        <button type="button" class="history-place"
+          data-place="kanem">Kanem-Bornu</button>
+        <button type="button" class="history-place"
+          data-place="sokoto">Sokoto Caliphate</button>
+        <button type="button" class="history-place"
+          data-place="nok">Nok Culture</button>
+      </div>
+
+      <div class="history-map-card">
+        <div class="history-map-visual">
+          <div class="map-watermark">NIGERIA</div>
+          <p class="map-instruction">Select a historic place below</p>
+
+          <button type="button" class="map-marker marker-ife active"
+            data-place="ife" aria-label="Explore Ile-Ife">1</button>
+          <button type="button" class="map-marker marker-oyo"
+            data-place="oyo" aria-label="Explore Oyo Empire">2</button>
+          <button type="button" class="map-marker marker-benin"
+            data-place="benin" aria-label="Explore Benin Kingdom">3</button>
+          <button type="button" class="map-marker marker-kanem"
+            data-place="kanem" aria-label="Explore Kanem-Bornu">4</button>
+          <button type="button" class="map-marker marker-sokoto"
+            data-place="sokoto" aria-label="Explore Sokoto Caliphate">5</button>
+          <button type="button" class="map-marker marker-nok"
+            data-place="nok" aria-label="Explore Nok Culture">6</button>
+        </div>
+
+        <div class="history-map-info" aria-live="polite">
+          <span class="kicker" id="history-map-period">Ancient heritage</span>
+          <h3 id="history-map-name">Ile-Ife</h3>
+          <p id="history-map-description">
+            Ile-Ife is a major centre of Yoruba history and is renowned
+            for its naturalistic brass, copper-alloy and terracotta art.
+          </p>
+          <p><strong>Region:</strong>
+            <span id="history-map-region">Southwestern Nigeria</span>
+          </p>
+          <a id="history-map-link"
+            href="https://www.google.com/maps/search/Ile-Ife+Nigeria/"
+            target="_blank" rel="noopener">Explore location on Google Maps ↗</a>
+        </div>
+      </div>
+    </div>
+    <p class="small">This is a simplified educational locator, not a map of
+      historical borders. The markers indicate approximate locations.</p>
+  </div>
+</section>
+
+<style>
+  #interactive-history-map .history-map-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 20px;
+    margin-top: 24px;
+  }
+
+  #interactive-history-map .history-map-buttons {
+    display: grid;
+    gap: 10px;
+    align-content: start;
+  }
+
+  #interactive-history-map .history-place {
+    padding: 13px;
+    border: 1px solid #c9d8ce;
+    border-radius: 10px;
+    background: white;
+    color: #173f30;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  #interactive-history-map .history-place.active {
+    background: #145c3b;
+    color: white;
+  }
+
+  #interactive-history-map .history-map-card {
+    overflow: hidden;
+    border: 1px solid #d5e0d8;
+    border-radius: 16px;
+    background: white;
+  }
+
+  #interactive-history-map .history-map-visual {
+    min-height: 260px;
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse at 55% 45%, #d7e9bc 0 18%, transparent 19%),
+      radial-gradient(ellipse at 42% 60%, #b9d8a1 0 27%, transparent 28%),
+      linear-gradient(145deg, #e8f0d9, #c9dfb9);
+  }
+
+  #interactive-history-map .map-watermark {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #66835e;
+    font-size: clamp(24px, 5vw, 42px);
+    font-weight: 800;
+    letter-spacing: 5px;
+    opacity: .6;
+  }
+
+  #interactive-history-map .map-instruction {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    margin: 0;
+    font-size: 12px;
+    color: #34533c;
+  }
+
+  #interactive-history-map .map-marker {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: #b17a26;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 2px 8px #0003;
+    cursor: pointer;
+  }
+
+  #interactive-history-map .map-marker.active {
+    background: #145c3b;
+    transform: scale(1.18);
+  }
+
+  #interactive-history-map .marker-ife { left: 40%; top: 61%; }
+  #interactive-history-map .marker-oyo { left: 34%; top: 49%; }
+  #interactive-history-map .marker-benin { left: 51%; top: 68%; }
+  #interactive-history-map .marker-kanem { left: 76%; top: 28%; }
+  #interactive-history-map .marker-sokoto { left: 19%; top: 34%; }
+  #interactive-history-map .marker-nok { left: 48%; top: 42%; }
+
+  #interactive-history-map .history-map-info {
+    padding: 20px;
+    color: #253b2f;
+  }
+
+  #interactive-history-map .history-map-info h3 {
+    margin: 6px 0 10px;
+  }
+
+  #interactive-history-map .history-map-info p {
+    line-height: 1.65;
+  }
+
+  #interactive-history-map .history-map-info a {
+    color: #145c3b;
+    font-weight: bold;
+  }
+
+  @media (max-width: 600px) {
+    #interactive-history-map .history-map-layout {
+      grid-template-columns: 1fr;
+    }
+
+    #interactive-history-map .history-map-buttons {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #interactive-history-map .history-map-visual {
+      min-height: 230px;
+    }
+  }
+</style>
+
+<script>
+(function () {
+  const root = document.getElementById("interactive-history-map");
+  if (!root || root.dataset.mapReady === "true") return;
+  root.dataset.mapReady = "true";
+
+  const places = {
+    ife: {
+      name: "Ile-Ife",
+      period: "Ancient heritage",
+      region: "Southwestern Nigeria",
+      description: "Ile-Ife is a major centre of Yoruba history, renowned for its naturalistic brass, copper-alloy and terracotta art.",
+      link: "https://www.google.com/maps/search/Ile-Ife+Nigeria/"
+    },
+    oyo: {
+      name: "Oyo Empire",
+      period: "Precolonial empire",
+      region: "Southwestern Nigeria",
+      description: "The Oyo Empire became a major Yoruba state, known for its political institutions, cavalry and regional trade.",
+      link: "https://www.google.com/maps/search/Old+Oyo+National+Park+Nigeria/"
+    },
+    benin: {
+      name: "Benin Kingdom",
+      period: "Historic kingdom",
+      region: "Present-day Edo State",
+      description: "The Benin Kingdom developed a powerful royal court and is celebrated for its brass plaques, sculptures and skilled guilds.",
+      link: "https://www.google.com/maps/search/Benin+City+Edo+Nigeria/"
+    },
+    kanem: {
+      name: "Kanem-Bornu",
+      period: "Long-lasting empire",
+      region: "Lake Chad region",
+      description: "Kanem-Bornu was a major state around Lake Chad, with long-distance trade and political influence across parts of the central Sahel.",
+      link: "https://www.google.com/maps/search/Lake+Chad+Nigeria/"
+    },
+    sokoto: {
+      name: "Sokoto Caliphate",
+      period: "Founded in the 19th century",
+      region: "Northern Nigeria",
+      description: "Established after the early-19th-century jihad led by Usman dan Fodio, the Sokoto Caliphate became a major political and scholarly centre.",
+      link: "https://www.google.com/maps/search/Sokoto+Nigeria/"
+    },
+    nok: {
+      name: "Nok Culture",
+      period: "First millennium BCE and later",
+      region: "Central Nigeria",
+      description: "The Nok culture is known for terracotta sculptures and early ironworking evidence found at archaeological sites in central Nigeria.",
+      link: "https://www.google.com/maps/search/Nok+Culture+Nigeria/"
+    }
+  };
+
+  function selectPlace(key) {
+    const place = places[key];
+    if (!place) return;
+
+    root.querySelectorAll("[data-place]").forEach(function (element) {
+      const selected = element.dataset.place === key;
+      element.classList.toggle("active", selected);
+      if (element.classList.contains("map-marker")) {
+        element.setAttribute("aria-pressed", String(selected));
+      }
+    });
+
+    root.querySelector("#history-map-period").textContent = place.period;
+    root.querySelector("#history-map-name").textContent = place.name;
+    root.querySelector("#history-map-description").textContent = place.description;
+    root.querySelector("#history-map-region").textContent = place.region;
+    root.querySelector("#history-map-link").href = place.link;
+  }
+
+  root.querySelectorAll("[data-place]").forEach(function (element) {
+    element.addEventListener("click", function () {
+      selectPlace(element.dataset.place);
+    });
+  });
+
+  selectPlace("ife");
+})();
+</script>
+
 <section id="quiz">
   <div class="container">
     <div class="section-title">

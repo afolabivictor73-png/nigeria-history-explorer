@@ -1,46 +1,53 @@
 # Nigeria History Explorer
 
-A responsive single-page educational website that explores Nigeria's history, major kingdoms, influential figures, historical landmarks, and key milestones from pre-colonial times to the present day.
+A modern educational website that tells the story of Nigeria through its history, leadership, cultural heritage, historical eras, and landmark locations.
 
 ## Overview
 
-Nigeria History Explorer is a static web project built with HTML, CSS, and JavaScript. It presents historical content in a clean, engaging format with:
+Nigeria History Explorer is a single-page web application designed to make Nigerian history more accessible and engaging. It highlights:
 
-- Hero section and navigation
-- Timeline of major Nigerian historical events
-- Profiles of notable historical figures
-- Featured heritage sites and cultural landmarks
-- Interactive map of historical regions
-- Search functionality for learning topics
+- major historical periods and events
+- influential figures and leaders
+- major kingdoms and civilizations
+- cultural landmarks and heritage locations
+- an interactive historical map
+- a built-in content search and quiz experience
+
+The project is built as a static website using HTML, CSS, and JavaScript, making it lightweight, fast, and easy to deploy.
+
+## Features
+
+- Responsive layout for desktop and mobile devices
+- Hero section with strong educational branding
+- Timeline of important Nigerian historical milestones
+- Profiles of notable historical figures such as Queen Amina, Usman dan Fodio, and Nnamdi Azikiwe
+- Sections covering kingdoms, empires, and historical places
+- Search functionality for exploring content on the page
+- Interactive historical map for learning by region and location
 - Quiz section for educational engagement
+- Visual design using a green-and-gold theme inspired by Nigerian identity and heritage
 
 ## Project Structure
 
 ```text
-.
-├── index.html          # Main application page
-├── logo.png            # Project logo
-├── README.md           # Project documentation
-└── Assets/             # Static assets (if present in the repo)
+nigeria-history-explorer/
+├── index.html
+├── logo.png
+├── README.md
+├── LICENSE
+├── Assets/
+└── ...
 ```
 
-## Features
+## Run Locally
 
-- Rich historical storytelling for Nigeria's past
-- Searchable content to help users discover topics quickly
-- Interactive map for historical locations
-- Educational quiz interface
-- Mobile-friendly layout and modern styling
+Because this is a static website, you can run it with any local web server.
 
-## Run the project locally
-
-Because this is a static website, you can run it in any of the following ways:
-
-### Option 1: Open directly in a browser
+### Option 1: Open directly
 
 Open `index.html` in your browser.
 
-### Option 2: Use a local server
+### Option 2: Use a Python server
 
 From the project folder, run:
 
@@ -48,7 +55,7 @@ From the project folder, run:
 python -m http.server 8000
 ```
 
-Then visit:
+Then open:
 
 ```text
 http://localhost:8000
@@ -59,35 +66,41 @@ http://localhost:8000
 - HTML5
 - CSS3
 - JavaScript
-- Static assets for branding and imagery
+- Static image assets
 
 ## Purpose
 
-This project is designed to educate visitors about Nigeria's historical heritage in an accessible and visually engaging way. It is suitable for schools, cultural groups, personal portfolios, and public learning platforms.
+This project serves as an educational and cultural storytelling platform. It is ideal for:
 
-## License
-
-This project does not currently include a license file. If you plan to publish or share it publicly, consider adding an open-source license such as MIT.
+- history learning
+- cultural awareness
+- school or classroom resources
+- portfolio showcasing
+- personal or community education projects
 
 ## Customization
 
-You can update the content in `index.html` to:
+You can easily update the project by editing `index.html` to:
 
-- Add more historical topics
-- Add new figures or locations
-- Update styling and colors
-- Replace images and branding assets
-- Expand the quiz or learning sections
+- add more historical content
+- include additional figures, kingdoms, or timelines
+- adjust colors, styles, and branding
+- replace logo or imagery
+- expand the quiz or search features
 
 ## Contributing
 
 Contributions are welcome. If you want to improve the project:
 
 1. Fork the repository
-2. Create a feature branch
+2. Create a new branch
 3. Make your changes
 4. Open a pull request
 
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
 ## Contact
 
-For questions or feedback, contact the repository owner or update the project details as needed.
+For feedback, collaboration, or project updates, reach out through the repository owner or project maintainer.

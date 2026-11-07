@@ -1,106 +1,80 @@
+<div align="center">
+
 # Nigeria History Explorer
 
-A modern educational website that tells the story of Nigeria through its history, leadership, cultural heritage, historical eras, and landmark locations.
+**Discover the people, places, kingdoms, and events that shaped Nigeria.**
 
-## Overview
+An interactive, responsive educational website exploring Nigeria's rich historical and cultural heritage.
 
-Nigeria History Explorer is a single-page web application designed to make Nigerian history more accessible and engaging. It highlights:
+</div>
 
-- major historical periods and events
-- influential figures and leaders
-- major kingdoms and civilizations
-- cultural landmarks and heritage locations
-- an interactive historical map
-- a built-in content search and quiz experience
+---
 
-The project is built as a static website using HTML, CSS, and JavaScript, making it lightweight, fast, and easy to deploy.
+## About
 
-## Features
+Nigeria History Explorer is a lightweight, single-page learning experience built to make Nigerian history approachable and engaging. It follows a broad journey from early civilizations and historic kingdoms through colonial rule, independence, and modern Nigeria, while highlighting local heritage such as the history of Idanre.
 
-- Responsive layout for desktop and mobile devices
-- Hero section with strong educational branding
-- Timeline of important Nigerian historical milestones
-- Profiles of notable historical figures such as Queen Amina, Usman dan Fodio, and Nnamdi Azikiwe
-- Sections covering kingdoms, empires, and historical places
-- Search functionality for exploring content on the page
-- Interactive historical map for learning by region and location
-- Quiz section for educational engagement
-- Visual design using a green-and-gold theme inspired by Nigerian identity and heritage
+## Highlights
 
-## Project Structure
+- **Explore historical eras** — discover ancient civilizations, kingdoms, colonial history, and independent Nigeria.
+- **Follow the timeline** — browse key events and milestones in Nigeria's history.
+- **Meet notable figures** — learn about influential leaders, scholars, and activists.
+- **Discover heritage places** — explore historical landmarks and cultural sites.
+- **Learn about Idanre** — read about local traditions, the Owa institution, and further research.
+- **Explore an interactive map** — select historical locations to view short descriptions and map links.
+- **Search and test your knowledge** — find topics across the page and take the built-in quiz.
+- **Use it on any device** — responsive layouts support desktop and mobile screens.
 
-```text
-nigeria-history-explorer/
-├── index.html
-├── logo.png
-├── README.md
-├── LICENSE
-├── Assets/
-└── ...
-```
+## Getting Started
 
-## Run Locally
+No package installation or build step is required. The site is served as static files.
 
-Because this is a static website, you can run it with any local web server.
+### Run locally
 
-### Option 1: Open directly
+1. Clone the repository and enter the project directory:
 
-Open `index.html` in your browser.
+   ```bash
+   git clone https://github.com/afolabivictor73-png/nigeria-history-explorer.git
+   cd nigeria-history-explorer
+   ```
 
-### Option 2: Use a Python server
+2. Open `index.html` in a browser, or start a local server:
 
-From the project folder, run:
+   ```bash
+   python -m http.server 8000
+   ```
 
-```bash
-python -m http.server 8000
-```
+3. Visit [http://localhost:8000](http://localhost:8000).
 
-Then open:
-
-```text
-http://localhost:8000
-```
-
-## Technologies Used
+## Built With
 
 - HTML5
 - CSS3
 - JavaScript
-- Static image assets
 
-## Purpose
+The page's structure, styles, and interactive behavior are contained in `index.html`. The repository also includes `logo.png` for project branding.
 
-This project serves as an educational and cultural storytelling platform. It is ideal for:
+## Project Structure
 
-- history learning
-- cultural awareness
-- school or classroom resources
-- portfolio showcasing
-- personal or community education projects
+```text
+.
+├── index.html    # Website, styles, and interactive behavior
+├── logo.png      # Project logo
+├── Assets/       # Additional assets, if used
+├── LICENSE       # MIT License
+└── README.md
+```
 
-## Customization
+## Historical Content and Sources
 
-You can easily update the project by editing `index.html` to:
+The website is an educational introduction, not a substitute for scholarly research. Historical accounts—especially oral traditions and local histories—may differ and should be considered alongside documentary, archaeological, and scholarly sources. The site includes further reading for Idanre history; consult the **Sources** section in the website for references.
 
-- add more historical content
-- include additional figures, kingdoms, or timelines
-- adjust colors, styles, and branding
-- replace logo or imagery
-- expand the quiz or search features
+The interactive map is illustrative. Its marker positions are approximate and do not represent precise boundaries or modern state borders.
 
 ## Contributing
 
-Contributions are welcome. If you want to improve the project:
-
-1. Fork the repository
-2. Create a new branch
-3. Make your changes
-4. Open a pull request
+Suggestions and improvements are welcome. To contribute, fork the repository, create a focused branch, make your changes, and open a pull request describing the update. Please prioritize clear sourcing and careful wording when adding historical claims.
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
-## Contact
-
-For feedback, collaboration, or project updates, reach out through the repository owner or project maintainer.
+This project is distributed under the MIT License. See [`LICENSE`](LICENSE) for details.

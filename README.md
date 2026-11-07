@@ -2,9 +2,14 @@
 
 # Nigeria History Explorer
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
 **Discover the people, places, kingdoms, and events that shaped Nigeria.**
 
-An interactive, responsive educational website exploring Nigeria's rich historical and cultural heritage.
+An interactive, responsive educational website exploring Nigeria's history and cultural heritage.
 
 </div>
 
@@ -12,69 +17,66 @@ An interactive, responsive educational website exploring Nigeria's rich historic
 
 ## About
 
-Nigeria History Explorer is a lightweight, single-page learning experience built to make Nigerian history approachable and engaging. It follows a broad journey from early civilizations and historic kingdoms through colonial rule, independence, and modern Nigeria, while highlighting local heritage such as the history of Idanre.
+Nigeria History Explorer is a lightweight, single-page learning experience designed to make Nigerian history more accessible and engaging. It traces the story of the country from early civilizations and historic kingdoms through colonial rule, independence, and modern democratic Nigeria, while also highlighting key local heritage themes such as the history of Idanre.
 
-## Highlights
+## Features
 
-- **Explore historical eras** — discover ancient civilizations, kingdoms, colonial history, and independent Nigeria.
-- **Follow the timeline** — browse key events and milestones in Nigeria's history.
-- **Meet notable figures** — learn about influential leaders, scholars, and activists.
-- **Discover heritage places** — explore historical landmarks and cultural sites.
-- **Learn about Idanre** — read about local traditions, the Owa institution, and further research.
-- **Explore an interactive map** — select historical locations to view short descriptions and map links.
-- **Search and test your knowledge** — find topics across the page and take the built-in quiz.
-- **Use it on any device** — responsive layouts support desktop and mobile screens.
+- **Historical storytelling** — explore eras, civilizations, empires, and major national milestones.
+- **Key figures** — learn about influential leaders, reformers, educators, and activists.
+- **Heritage and landmarks** — discover important places and cultural sites across Nigeria.
+- **Idanre focus** — read about local traditions, cultural identity, and historical research themes.
+- **Interactive map** — select historical regions to view curated descriptions and location links.
+- **Search functionality** — find content quickly across the page.
+- **Built-in quiz** — reinforce learning through a simple knowledge check.
+- **Responsive design** — works well across desktop and mobile screens.
 
-## Getting Started
+## Demo
 
-No package installation or build step is required. The site is served as static files.
+You can view the project locally by opening the website in a browser or serving it from a local web server.
 
-### Run locally
+```bash
+python -m http.server 8000
+```
 
-1. Clone the repository and enter the project directory:
+Then visit:
 
-   ```bash
-   git clone https://github.com/afolabivictor73-png/nigeria-history-explorer.git
-   cd nigeria-history-explorer
-   ```
+```text
+http://localhost:8000
+```
 
-2. Open `index.html` in a browser, or start a local server:
-
-   ```bash
-   python -m http.server 8000
-   ```
-
-3. Visit [http://localhost:8000](http://localhost:8000).
-
-## Built With
+## Tech Stack
 
 - HTML5
 - CSS3
 - JavaScript
 
-The page's structure, styles, and interactive behavior are contained in `index.html`. The repository also includes `logo.png` for project branding.
+The core implementation lives in `index.html`, with project branding in `logo.png`.
 
 ## Project Structure
 
 ```text
 .
-├── index.html    # Website, styles, and interactive behavior
-├── logo.png      # Project logo
-├── Assets/       # Additional assets, if used
+├── index.html    # Main page, styling, and interactivity
+├── logo.png      # Branding/logo asset
+├── Assets/       # Additional static assets
 ├── LICENSE       # MIT License
-└── README.md
+├── README.md     # Project documentation
+└── ...
 ```
 
-## Historical Content and Sources
+## Historical Note
 
-The website is an educational introduction, not a substitute for scholarly research. Historical accounts—especially oral traditions and local histories—may differ and should be considered alongside documentary, archaeological, and scholarly sources. The site includes further reading for Idanre history; consult the **Sources** section in the website for references.
-
-The interactive map is illustrative. Its marker positions are approximate and do not represent precise boundaries or modern state borders.
+This project is an educational and cultural showcase. It is intended to be informative and accessible, but historical narratives can vary by source and interpretation. Oral traditions, local histories, and scholarly research should be consulted alongside the information presented here.
 
 ## Contributing
 
-Suggestions and improvements are welcome. To contribute, fork the repository, create a focused branch, make your changes, and open a pull request describing the update. Please prioritize clear sourcing and careful wording when adding historical claims.
+Contributions are welcome. To propose improvements:
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Make your changes.
+4. Open a pull request with a clear description of the update.
 
 ## License
 
-This project is distributed under the MIT License. See [`LICENSE`](LICENSE) for details.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
